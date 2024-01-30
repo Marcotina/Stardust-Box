@@ -1,0 +1,42 @@
+/* ... (existing styles) */
+
+.about-section {
+    background-color: black;
+    color: gold;
+    padding: 50px 0;
+  }
+  
+  .owner-image img {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+  }
+  
+  .owner-description {
+    margin-top: 20px;
+  }
+  
+  .owner-description h2 {
+    font-size: 32px;
+  }
+  
+  .owner-description p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  /* ... (existing styles) */
+  
+  nav {
+    display: flex;
+  }
+  
+  nav a {
+    color: gold;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+  .logo img {
+    max-height: 50px;
+    margin-right: 10px; /* Adjust margin as needed */
+  }
