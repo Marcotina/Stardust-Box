@@ -28,7 +28,6 @@ body {
 }
 .big-title{
   color:Gold;
-  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -61,6 +60,9 @@ nav a {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  background-color: rgb(0, 1, 8);
+  border-width: 5px;
+  border: 1px solid gold;
 }
 
 /* ... (existing styles) */

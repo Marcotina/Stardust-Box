@@ -11,6 +11,10 @@ header {
   width: 10%;
   height: 20%;
 }
+body {
+  overflow-y: scroll; /* Allow vertical scrolling */
+}
+
 .about-section {
     color: white; 
     position: fixed;
@@ -45,7 +49,13 @@ header {
   }
   
   .owner-description {
-    margin-top: 20px;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: fadeIn 3s ease-in-out forwards; /* Animation to fade in */
+    
   }
   
   .owner-description h2 {
@@ -91,4 +101,27 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@keyframes moveAndFade {
+  0% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.journey-text {
+  font-size: 18px;
+  line-height: 1.5;
 }
