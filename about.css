@@ -7,7 +7,10 @@ header {
   text-align: center; /* Center the content */
   z-index: 3;
 }
-
+.logo-nav{
+  width: 10%;
+  height: 20%;
+}
 .about-section {
     color: white; 
     position: fixed;
