@@ -1,105 +1,137 @@
 /* ... (existing styles) */
+ /* ... (existing styles) */
 
 header {
-    background-color: black;
-    color: gold;
-    padding: 10px 0;
+  background-color: black;
+  color: gold;
+  padding: 10px 0;
+  text-align: center; /* Center the content */
+  z-index: 3;
+}
+
+body {
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+
+.content {
+  z-index: 1; /* Ensure content appears on top of the blurred background */
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.big-title{
+  color:Gold;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.logo {
+  order: 1; /* Reorder the logo to the first position */
+}
+
+.logo img {
+  max-height: 50px;
+  display: block; /* Ensure the image is centered */
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  align-items: center; /* Align items vertically in the flex container */
+  order: 2; /* Reorder the navigation to the second position */
+}
+
+nav a {
+  color: gold;
+  margin-right: 15px; /* Add some spacing between the links */
+  text-decoration: none;
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* ... (existing styles) */
+
+.marquee-inner {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee h2 {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.product-link {
+  position: relative;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.product-link img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border: 1px solid gold;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-link:hover img {
+  transform: scale(1.1);
+}
+
+.product-price {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: gold;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
   }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  100% {
+    transform: translateX(-100%);
   }
-  
-  .logo img {
-    max-height: 50px;
-    margin-right: 10px; /* Adjust margin as needed */
-  }
-  
-  nav {
-    display: flex;
-  }
-  
-  nav a {
-    color: gold;
-    margin-left: 20px;
-    text-decoration: none;
-  }
-  
-  .marquee {
-    overflow: hidden;
-    white-space: nowrap;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-  
-  .marquee-inner {
-    display: inline-block;
-    animation: marquee 20s linear infinite;
-  }
-  
-  .marquee h2 {
-    color: gold;
-    margin-bottom: 10px;
-  }
-  
-  .product-link {
-    position: relative;
-    margin-right: 20px;
-    display: inline-block;
-  }
-  
-  .product-link img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border: 1px solid gold;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .product-link:hover img {
-    transform: scale(1.1);
-  }
-  
-  .product-price {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: black;
-    color: gold;
-    padding: 5px;
-    border-radius: 5px;
-  }
-  
-  @keyframes marquee {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
-  .footer {
-    background-color: black;
-    color: gold;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  .social-icons {
-    font-size: 24px;
-  }
-  
-  .social-icon {
-    color: gold;
-    margin: 0 10px;
-    text-decoration: none;
-  }
-  
-  /* ... (existing styles) */
-  
+}
+
+.footer {
+  background-color: black;
+  color: gold;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.social-icons {
+  font-size: 24px;
+}
+
+.social-icon {
+  color: gold;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* ... (existing styles) */
