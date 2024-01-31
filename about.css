@@ -7,31 +7,16 @@ header {
   text-align: center; /* Center the content */
   z-index: 3;
 }
-.logo-nav{
-  width: 10%;
-  height: 20%;
-}
+
 body {
   overflow-y: scroll; /* Allow vertical scrolling */
 }
-
-.about-section {
-    color: white; 
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    margin-left: 20px;
-    margin-right: 20px;
-    scroll-behavior: auto;
-  }
-
   .background-image {
     position: fixed;
-    z-index: 1;
-    display: block;
-    background-image: url('images/background3.png');
-    background-image: 65%;
+    z-index: 0;
+    background-image: url('images/background3.jpeg');
+    background-size: cover;
+    background-position: center center;
     width: 100%;
     height: 100%;
     -webkit-filter: blur(3px);
@@ -40,7 +25,23 @@ body {
     -ms-filter: blur(3px);
     filter: blur(3px);
   }
-  
+  .about-section {
+    background-color: black;
+    color: gold;
+    padding: 50px 0;
+    overflow: hidden; /* Hide overflowing content */
+  }
+  .owner-container {
+    text-align: center;
+    position: relative;
+  }
+  .owner-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+    animation: moveAndFade 3s ease-in-out forwards; /* Animation to move and fade in */
+  }
   .owner-image img {
     width: 300px;
     height: 300px;
@@ -63,8 +64,8 @@ body {
   }
   
   .owner-description p {
-    font-size: 18px;
-    line-height: 1.5;
+    opacity: 0;
+    animation: fadeInStaggered 1s ease-in-out forwards; /* Staggered fade-in for paragraphs */
   }
   
   
@@ -78,29 +79,33 @@ body {
     margin-right: 10px; /* Adjust margin as needed */
   }
 
-.footer {
-  background-color: black;
-  color: gold;
-  padding: 20px 0;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.social-icons {
-  font-size: 24px;
-}
-
-.social-icon {
-  color: gold;
-  margin: 0 10px;
-  text-decoration: none;
-}
+  .footer {
+    background-color: black;
+    color: gold;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+  }
+  
+  .social-icons {
+    font-size: 24px;
+    z-index: 3;
+  }
+  
+  .social-icon {
+    color: gold;
+    margin: 0 10px;
+    text-decoration: none;
+    z-index: 999;
+  }
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 3;
 }
 @keyframes moveAndFade {
   0% {
@@ -120,6 +125,16 @@ body {
     opacity: 1;
   }
 }
+
+@keyframes fadeInStaggered {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .journey-text {
   font-size: 18px;
