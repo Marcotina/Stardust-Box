@@ -22,6 +22,24 @@
       </nav>
     </div>
   </header>
+  <script>
+    function addCacheBuster() {
+      var images = document.querySelectorAll('img');
+      var timestamp = new Date().getTime();
+
+      images.forEach(function (img) {
+        var src = img.getAttribute('src');
+        if (src.indexOf('?') === -1) {
+          img.setAttribute('src', src + '?v=' + timestamp);
+        } else {
+          img.setAttribute('src', src + '&v=' + timestamp);
+        }
+      });
+    }
+
+    // Call the function when the page is loaded
+    window.onload = addCacheBuster;
+  </script>
 <div class="big-marquee">
 <h2 class="big-title">New Arrivals</h2>
   <div class="marquee">
