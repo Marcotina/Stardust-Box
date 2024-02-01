@@ -55,38 +55,88 @@ body {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      animation: fadeIn 3s ease-in-out forwards; /* Animation to fade in */
+      animation: fadeIn 4s ease-in-out forwards; /* Animation to fade in */
     
   }
   
-  .owner-description h2 {
-    font-size: 32px;
-  }
-  
-  .owner-description p {
-    opacity: 0;
-    animation: fadeInStaggered 1s ease-in-out forwards; /* Staggered fade-in for paragraphs */
-  }
-  @keyframes moveToLeft {
+  @keyframes moveAndFade {
     0% {
-      transform: translate(0%, 0%);
+      opacity: 0;
+      transform: translate(100%, 0%);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(100%, 0%);
     }
     100% {
-      transform: translate(-100%, 0%);
+      opacity: 1;
+      transform: translate(-80%, 0%);
     }
   }
-  
+ 
   @keyframes fadeIn {
     0% {
       opacity: 0;
+    }
+    70%{
+      opacity: 0%;
     }
     100% {
       opacity: 1;
     }
   }
-  
+  .owner-description{
+    opacity: 0;
+    animation: fadeInStaggered 4s ease-in-out forwards; /* Staggered fade-in for paragraphs */
+  }
+  .anim2{
+    opacity: 0;
+    animation: fadeInStaggered 4s ease-in-out forwards; /* Staggered fade-in for paragraphs */
+  }
+  .anim3{
+    opacity: 0;
+    animation: fadeInStaggered 4s ease-in-out forwards; /* Staggered fade-in for paragraphs */
+  }
+  .anim4{
+    opacity: 0;
+    animation: fadeInStaggered 4s ease-in-out forwards; /* Staggered fade-in for paragraphs */
+  }
+  .anim5{
+    opacity: 0;
+    animation: fadeInStaggered 4s ease-in-out forwards; /* Staggered fade-in for paragraphs */
+  }
+  .anim6{
+    opacity: 0;
+    animation: fadeInStaggered 4s ease-in-out forwards; /* Staggered fade-in for paragraphs */
+  }
+  .anim7{
+    opacity: 0;
+    animation: fadeInStaggered 4s ease-in-out forwards; /* Staggered fade-in for paragraphs */
+  }
+
+  .anim2{
+    animation-delay: 0.4s;
+  }
+  .anim3{
+    animation-delay: 1s;
+  }
+  .anim4{
+    animation-delay: 1.7s;
+  }
+  .anim5{
+    animation-delay: 2.5s;
+  }
+  .anim6{
+    animation-delay: 3.1s;
+  }
+  .anim7{
+    animation-delay: 4s;
+  }
   @keyframes fadeInStaggered {
     0% {
+      opacity: 0;
+    }
+    70%{
       opacity: 0;
     }
     100% {
