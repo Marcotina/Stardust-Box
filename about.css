@@ -2,7 +2,6 @@
 
 header {
   background-color: black;
-  color: aliceblue;
   padding: 10px 0;
   text-align: center; /* Center the content */
   z-index: 3;
@@ -26,12 +25,12 @@ h2, h4, h5{
     background-size: cover;
     background-position: center center;
     width: 100%;
-    height: 103%;
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
+    height: 100%;
+    -webkit-filter: blur(7px);
+    -moz-filter: blur(7px);
+    -o-filter: blur(7px);
+    -ms-filter: blur(7px);
+    filter: blur(7px);
   }
   .about-section {
     background-color: black;
@@ -197,9 +196,9 @@ h2, h4, h5{
   font-size: 18px;
   line-height: 1.5;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   body {
-    max-width: 100%; /* Set maximum width to 100% */
+    max-width: 50%;
     padding-top: 60px;
     padding-bottom: 60px;
     height: 100vh;
@@ -210,58 +209,42 @@ h2, h4, h5{
   .container {
     flex-direction: column; /* Stack elements vertically on small screens */
     margin: 0 auto;
-    max-width: 100%;
     min-height: 100%;
   }
-h2,h4, h5{
-  font-size: 90%
-}
+
 .owner-description {
   max-height: 70vh; /* or any other fixed value that suits your design */
   overflow-y: auto; /* Add this to enable vertical scrolling if needed */
 }
-
-.owner-image{
-  animation: moveAndFade 4.5s ease-in-out forwards; /* Animation to move and fade in */
-}
-  .owner-image img {
-    width: 50%; /* Make the image responsive within its container */
-    height: 50%;
-  }
 
   .owner-description {
     text-align: center; /* Center text on small screens */
     margin-bottom: 10px;
     flex-grow: 1;
   }
-
+ header {
+    padding: 10px 0;
+  }
+  nav a {
+    margin: 0 15px; /* Add spacing between navigation links */
+    font-size: 16px; /* Adjust font size for better readability */
+  }
   .social-icons {
     font-size: 12x;
     z-index: 3;
   }
-
-  header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 3;
-    text-align: center;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    padding: 10px; /* Adjust padding if needed */
-    background-color: black; /* Adjust background color if needed */
+  h4, h5{
+    font-size: 90%
   }
-.footer {
-  position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 3;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 10px; /* Adjust padding if needed */
-    background-color: black; /* Adjust background color if needed */
+h2{
+  font-size: 120%;
+  color: aliceblue;
 }
+  .owner-image{
+    animation: moveAndFade 4.5s ease-in-out forwards; /* Animation to move and fade in */
+  }
+
+  
   @keyframes moveAndFade {
     0% {
       opacity: 0;
