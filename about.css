@@ -215,6 +215,7 @@ h2, h4, h5{
 .owner-description {
   max-height: 70vh; /* or any other fixed value that suits your design */
   overflow-y: auto; /* Add this to enable vertical scrolling if needed */
+  margin-top: 20px;
 }
 
   .owner-description {
