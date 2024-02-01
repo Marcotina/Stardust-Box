@@ -12,7 +12,7 @@ body {
     font-family: 'Bodoni', serif;
   
 }
-h2, h4{
+h2, h4, h5{
   color: rgb(255, 238, 144);
 }
   .background-image {
@@ -33,7 +33,6 @@ h2, h4{
     background-color: black;
     color: aliceblue;
     padding: 50px 0;
-    overflow: hidden; /* Hide overflowing content */
   }
   .owner-container {
     text-align: center;
@@ -60,6 +59,7 @@ h2, h4{
       left: 50%;
       transform: translate(-50%, -50%);
       animation: fadeIn 4s ease-in-out forwards; /* Animation to fade in */
+      word-wrap: break-word; max-width: 100%; /* Ensure the text does not exceed 100% of the container width */
     
   }
   
@@ -193,7 +193,7 @@ h2, h4{
   font-size: 18px;
   line-height: 1.5;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1080px) {
   body {
     font-size: 16px; /* Adjust base font size for small screens */
   }
@@ -201,9 +201,16 @@ h2, h4{
   .container {
     flex-direction: column; /* Stack elements vertically on small screens */
   }
-
+h2,h4, h5{
+  font-size: 70%
+}
+.owner-description{
+  font-size: 70%;
+  max-height: 70%;
+}
   .owner-image img {
-    width: 100%; /* Make the image responsive within its container */
+    width: 40%; /* Make the image responsive within its container */
+    height: 40%;
   }
 
   .owner-description {
@@ -211,11 +218,22 @@ h2, h4{
   }
 
   .social-icons {
-    display: flex;
-    justify-content: center;
+    font-size: 12x;
+    z-index: 3;
   }
 
-  .social-icon {
-    margin: 0 10px;
+  @keyframes moveAndFade {
+    0% {
+      opacity: 0;
+      transform: translate(60%, 0%);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(60%, 0%);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(0%, 0%);
+    }
   }
 }
