@@ -199,9 +199,9 @@ h2, h4, h5{
 @media only screen and (max-width: 769px) {
   body {
     max-width: 50%;
-    padding-top: 60px;
+    padding-top: 80px;
     padding-bottom: 60px;
-    height: 110vh;
+    height: 100vh;
     margin: 0; /* Ensure no margin to prevent extra space */
     overflow-x: hidden; /* Hide horizontal overflow */
   }
