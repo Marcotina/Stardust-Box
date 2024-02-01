@@ -221,8 +221,8 @@ h2,h4, h5{
   animation: moveAndFade 4.5s ease-in-out forwards; /* Animation to move and fade in */
 }
   .owner-image img {
-    width: 40%; /* Make the image responsive within its container */
-    height: 40%;
+    width: 50%; /* Make the image responsive within its container */
+    height: 50%;
   }
 
   .owner-description {
