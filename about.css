@@ -6,6 +6,10 @@ header {
   padding: 10px 0;
   text-align: center; /* Center the content */
   z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 body {
@@ -62,9 +66,8 @@ h2, h4, h5{
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      animation: fadeIn 4s ease-in-out forwards; /* Animation to fade in */
+      animation: fadeInStaggered 4s ease-in-out forwards; /* Staggered fade-in for paragraphs */
       word-wrap: break-word; max-width: 100%; /* Ensure the text does not exceed 100% of the container width */
-    
   }
   
   @keyframes moveAndFade {
@@ -93,10 +96,7 @@ h2, h4, h5{
       opacity: 1;
     }
   }
-  .owner-description{
-    opacity: 0;
-    animation: fadeInStaggered 4s ease-in-out forwards; /* Staggered fade-in for paragraphs */
-  }
+ 
   .anim2{
     opacity: 0;
     animation: fadeInStaggered 4s ease-in-out forwards; /* Staggered fade-in for paragraphs */
@@ -227,6 +227,7 @@ h2,h4, h5{
 
   .owner-description {
     text-align: center; /* Center text on small screens */
+    margin-bottom: 10px;
     flex-grow: 1;
   }
 
@@ -234,7 +235,11 @@ h2,h4, h5{
     font-size: 12x;
     z-index: 3;
   }
-
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   @keyframes moveAndFade {
     0% {
       opacity: 0;

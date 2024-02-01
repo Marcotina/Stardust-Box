@@ -7,12 +7,18 @@ header {
   padding: 10px 0;
   text-align: center; /* Center the content */
   z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 body {
   background-image: url('images/background3.jpeg');
   background-size: cover;
   background-position: center center;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 
@@ -137,3 +143,82 @@ nav a {
 }
 
 /* ... (existing styles) */
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 10px 0;
+  }
+
+  body {
+    background-size: auto; /* Adjust background size for better visibility on smaller screens */
+    background-position: center top;
+  }
+
+  .container {
+    flex-direction: column; /* Stack items vertically in smaller screens */
+    align-items: center;
+  }
+
+  .logo {
+    order: 2; /* Reorder the logo to appear after the navigation */
+  }
+
+  nav {
+    padding: 10px 0; /* Add padding for better spacing in navigation links */
+    text-align: center; /* Center the navigation links */
+  }
+
+  nav a {
+    margin: 0 15px; /* Add spacing between navigation links */
+    font-size: 16px; /* Adjust font size for better readability */
+  }
+
+  .marquee {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .marquee-inner {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .marquee h2 {
+    font-size: 1.5em; /* Adjust font size for better readability on smaller screens */
+    display: inline-block;
+    animation: marquee 8s linear infinite;
+  }
+
+
+  @keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  .product-link {
+    margin-right: 5px; /* Remove margin to save space on smaller screens */
+  }
+
+  .product-link img {
+    width: 100px; /* Adjust the width of the product images */
+    height: 100px; /* Adjust the height of the product images */
+    object-fit: cover; /* Maintain aspect ratio and cover the box */
+    border: 1px solid rgb(255, 238, 144);
+    border-radius: 5px;
+  }
+
+  .product-price {
+    display: block; /* Ensure prices are displayed on the marquee */
+    font-size: 10px; /* Adjust font size for better readability */
+    margin-bottom: -5px
+  }
+
+  .footer {
+    padding: 10px 0; /* Reduce padding for the footer on smaller screens */
+  }
+
+  .social-icons {
+    font-size: 18px; /* Adjust font size for better visibility on smaller screens */
+  }
+}
