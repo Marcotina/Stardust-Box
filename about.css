@@ -216,12 +216,8 @@ h2, h4, h5{
   max-height: 70vh; /* or any other fixed value that suits your design */
   overflow-y: auto; /* Add this to enable vertical scrolling if needed */
   margin-top: 20px;
-}
-
-  .owner-description {
-    text-align: center; /* Center text on small screens */
-    margin-bottom: 10px;
-    flex-grow: 1;
+  text-align: center; /* Center text on small screens */
+  flex-grow: 1;
   }
  header {
     padding: 10px 0;
