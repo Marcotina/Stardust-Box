@@ -195,18 +195,21 @@ h2, h4, h5{
 }
 @media only screen and (max-width: 768px) {
   body {
-    font-size: 16px; /* Adjust base font size for small screens */
+    font-size: 90%;
   }
 
   .container {
     flex-direction: column; /* Stack elements vertically on small screens */
   }
 h2,h4, h5{
-  font-size: 70%
+  font-size: 90%
 }
 .owner-description{
-  font-size: 70%;
   max-height: 70%;
+}
+
+.owner-image{
+  animation: moveAndFade 4.5s ease-in-out forwards; /* Animation to move and fade in */
 }
   .owner-image img {
     width: 40%; /* Make the image responsive within its container */
@@ -215,6 +218,7 @@ h2,h4, h5{
 
   .owner-description {
     text-align: center; /* Center text on small screens */
+    flex-grow: 1;
   }
 
   .social-icons {
@@ -229,7 +233,7 @@ h2,h4, h5{
     }
     50% {
       opacity: 1;
-      transform: translate(60%, 0%);
+      transform: translate(20%, 0%);
     }
     100% {
       opacity: 0;
