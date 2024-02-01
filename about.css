@@ -13,25 +13,27 @@ header {
 
 body {
     font-family: 'Bodoni', serif;
+}
 
-}
-h2, h4, h5{
-  color: rgb(255, 238, 144);
-}
   .background-image {
     position: fixed;
     z-index: 0;
     background-image: url('images/background3.jpeg');
     background-size: cover;
     background-position: center center;
-    width: 100%;
+    width: 102%;
     height: 100%;
+    right: 0;
+    left: 0;
     -webkit-filter: blur(7px);
     -moz-filter: blur(7px);
     -o-filter: blur(7px);
     -ms-filter: blur(7px);
     filter: blur(7px);
   }
+  h2, h4, h5{
+  color: rgb(255, 238, 144);
+}
   .about-section {
     background-color: black;
     color: aliceblue;
@@ -46,7 +48,7 @@ h2, h4, h5{
     height: auto;
     border-radius: 10px;
     position: relative;
-    animation: moveAndFade 3s ease-in-out forwards; /* Animation to move and fade in */
+    animation: move 3s ease-in-out forwards; /* Animation to move and fade in */
   }
   .owner-image img {
     width: 300px;
@@ -69,7 +71,7 @@ h2, h4, h5{
       word-wrap: break-word; max-width: 100%; /* Ensure the text does not exceed 100% of the container width */
   }
   
-  @keyframes moveAndFade {
+  @keyframes move {
     0% {
       opacity: 0;
       transform: translate(100%, 0%);
@@ -80,7 +82,7 @@ h2, h4, h5{
     }
     100% {
       opacity: 1;
-      transform: translate(-80%, 0%);
+      transform: translate(-55%, 0%);
     }
   }
  
@@ -202,7 +204,6 @@ h2, h4, h5{
     padding-top: 80px;
     padding-bottom: 60px;
     height: 100vh;
-    margin: 0; /* Ensure no margin to prevent extra space */
     overflow-x: hidden; /* Hide horizontal overflow */
   }
 
@@ -240,7 +241,6 @@ h2{
   .owner-image{
     animation: moveAndFade 4.5s ease-in-out forwards; /* Animation to move and fade in */
   }
-
   
   @keyframes moveAndFade {
     0% {
