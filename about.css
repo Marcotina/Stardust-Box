@@ -196,10 +196,14 @@ h2, h4, h5{
 @media only screen and (max-width: 768px) {
   body {
     font-size: 90%;
+    
   }
 
   .container {
     flex-direction: column; /* Stack elements vertically on small screens */
+    margin: 0 auto;
+    max-width: 100%;
+    min-height: 100%;
   }
 h2,h4, h5{
   font-size: 90%
