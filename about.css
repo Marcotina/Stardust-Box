@@ -199,8 +199,12 @@ h2, h4, h5{
 }
 @media only screen and (max-width: 768px) {
   body {
-    font-size: 90%;
-    overflow-y: scroll;
+    max-width: 100%; /* Set maximum width to 100% */
+    padding-top: 60px;
+    padding-bottom: 60px;
+    height: 100vh;
+    margin: 0; /* Ensure no margin to prevent extra space */
+    overflow-x: hidden; /* Hide horizontal overflow */
   }
 
   .container {
@@ -235,10 +239,28 @@ h2,h4, h5{
     font-size: 12x;
     z-index: 3;
   }
+
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    text-align: center;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 10px; /* Adjust padding if needed */
+    background-color: black; /* Adjust background color if needed */
+  }
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px; /* Adjust padding if needed */
+    background-color: black; /* Adjust background color if needed */
 }
   @keyframes moveAndFade {
     0% {
