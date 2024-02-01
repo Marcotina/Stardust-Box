@@ -2,14 +2,18 @@
 
 header {
   background-color: black;
-  color: gold;
+  color: aliceblue;
   padding: 10px 0;
   text-align: center; /* Center the content */
   z-index: 3;
 }
 
 body {
-  overflow-y: scroll; /* Allow vertical scrolling */
+    font-family: 'Bodoni', serif;
+  
+}
+h2, h4{
+  color: rgb(255, 238, 144);
 }
   .background-image {
     position: fixed;
@@ -18,16 +22,16 @@ body {
     background-size: cover;
     background-position: center center;
     width: 100%;
-    height: 100%;
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
+    height: 103%;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
   }
   .about-section {
     background-color: black;
-    color: gold;
+    color: aliceblue;
     padding: 50px 0;
     overflow: hidden; /* Hide overflowing content */
   }
@@ -146,7 +150,7 @@ body {
   
   
   nav a {
-    color: gold;
+    color: rgb(255, 238, 144);
     margin-left: 20px;
     text-decoration: none;
   }
@@ -157,7 +161,7 @@ body {
 
   .footer {
     background-color: black;
-    color: gold;
+    color: rgb(255, 238, 144);
     padding: 20px 0;
     text-align: center;
     position: fixed;
@@ -172,7 +176,7 @@ body {
   }
   
   .social-icon {
-    color: gold;
+    color: rgb(255, 238, 144);
     margin: 0 10px;
     text-decoration: none;
     z-index: 999;
