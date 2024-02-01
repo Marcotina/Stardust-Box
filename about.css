@@ -201,7 +201,7 @@ h2, h4, h5{
     max-width: 50%;
     padding-top: 60px;
     padding-bottom: 60px;
-    height: 100vh;
+    height: 110vh;
     margin: 0; /* Ensure no margin to prevent extra space */
     overflow-x: hidden; /* Hide horizontal overflow */
   }
