@@ -10,7 +10,7 @@ header {
 
 body {
     font-family: 'Bodoni', serif;
-  
+
 }
 h2, h4, h5{
   color: rgb(255, 238, 144);
@@ -50,6 +50,10 @@ h2, h4, h5{
     height: 300px;
     border-radius: 10px;
     padding-right: 20px;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
   
   .owner-description {
@@ -196,7 +200,7 @@ h2, h4, h5{
 @media only screen and (max-width: 768px) {
   body {
     font-size: 90%;
-    
+    overflow-y: scroll;
   }
 
   .container {
@@ -208,8 +212,9 @@ h2, h4, h5{
 h2,h4, h5{
   font-size: 90%
 }
-.owner-description{
-  max-height: 70%;
+.owner-description {
+  max-height: 70vh; /* or any other fixed value that suits your design */
+  overflow-y: auto; /* Add this to enable vertical scrolling if needed */
 }
 
 .owner-image{
