@@ -138,6 +138,7 @@ header {
     left: 0;
     text-align: left;
     color: aliceblue;
+    line-height: 3vh;
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
