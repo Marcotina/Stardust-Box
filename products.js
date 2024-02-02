@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
     const productContainer = document.getElementById('product-container');
+    let products;
 
     // Fetch product data from your server or an API
     fetch('products.json')
         .then(response => response.json())
         .then(data => {
-            displayProducts(data);
+            products = data;
+            displayProducts(products);
         })
         .catch(error => {
             console.error('Error fetching product data:', error);
@@ -13,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to display products in the product-container
     function displayProducts(products) {
-        productContainer.innerHTML = "";
+        productContainer.innerHTML = '';
 
         products.forEach(product => {
             const productCard = document.createElement('div');
@@ -31,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const productInfo = document.createElement('div');
             productInfo.classList.add('product-info');
             productInfo.innerHTML = `
+                <p class="category">Category: ${product.category}</p>
                 <p class="dimensions">Dimensions: ${product.dimensions}</p>
                 <p class="color">Color: ${product.color}</p>
                 <p class="material">Material: ${product.material}</p>
