@@ -10,6 +10,12 @@ header {
   left: 0;
   width: 100%;
 }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .logo img {
   max-height: 50px;
   display: block; /* Ensure the image is centered */
