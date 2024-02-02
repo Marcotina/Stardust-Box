@@ -1,23 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
     const productContainer = document.getElementById('product-container');
-    let products;
 
     // Fetch product data from your server or an API
     fetch('products.json')
         .then(response => response.json())
         .then(data => {
-            products = data;
-            displayProducts(products);
+            displayProducts(data);
         })
         .catch(error => {
             console.error('Error fetching product data:', error);
         });
-
-    // Function to filter products based on category
-    function filterItems(category) {
-        const filteredProducts = category === 'all' ? products : products.filter(product => product.category === category);
-        displayProducts(filteredProducts);
-    }
 
     // Function to display products in the product-container
     function displayProducts(products) {
@@ -49,13 +41,4 @@ document.addEventListener('DOMContentLoaded', function () {
             productContainer.appendChild(productCard);
         });
     }
-
-    // Event listener for category filtering
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const category = this.dataset.category;
-            filterItems(category);
-        });
-    });
 });
