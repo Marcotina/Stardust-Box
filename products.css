@@ -113,6 +113,15 @@ header {
   .product-card {
     position: relative;
     overflow: hidden;
+    max-width: 500px; /* Set the maximum width for the product card */
+    margin: 0 auto; /* Center the product card on the page */
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Set the maximum width for the images */
+    border: 5px solid #fff; /* Add border to the image */
   }
   
   .product-overlay {
