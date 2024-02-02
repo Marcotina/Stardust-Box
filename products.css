@@ -109,63 +109,46 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  
   .product-card {
     position: relative;
     overflow: hidden;
-    max-width: 500px; /* Set the maximum width for the product card */
-    margin: 0 auto; /* Center the product card on the page */
+    margin: 20px;
+    border: 2px solid #fff; /* Set border color to match the index.html marquee */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box-shadow for a subtle shadow effect */
   }
   
   .product-card img {
-    width: 100%;
-    height: auto;
-    max-width: 100%; /* Set the maximum width for the images */
-    border: 5px solid #fff; /* Add border to the image */
+    width: 100%; /* Make the image responsive */
+    max-height: 500px; /* Set max-height to 500px */
+    transition: transform 0.5s ease-in-out; /* Add a smooth transition for the hover effect */
   }
   
-  .product-overlay {
+  .product-card:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+  }
+  
+  .product-info {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .product-card:hover .product-overlay {
-    opacity: 1;
-  }
-  
-  .product-overlay p {
-    margin: 0;
-  }
-  
-  /* Adjust the size of the product card */
-  .product-card img {
     width: 100%;
-    height: auto;
-    border: 5px solid #fff; /* Add border to the image */
+    padding: 15px;
+    box-sizing: border-box;
+    opacity: 0; /* Initially set opacity to 0 for the fade-in effect */
+    transition: opacity 0.5s ease-in-out; /* Add a smooth transition for the fade-in effect */
   }
   
-  /* Add styles for the product details */
-  .product-overlay p {
+  .product-card:hover .product-info {
+    opacity: 1; /* Fade in the product info on hover */
+  }
+  
+  .product-info p {
     margin: 0;
     font-size: 16px;
   }
   
-  .product-overlay p:first-child {
+  .product-info p.price {
     font-weight: bold;
-  }
-  
-  /* Add styles for the price */
-  .product-overlay p:last-child {
-    font-size: 20px;
   }

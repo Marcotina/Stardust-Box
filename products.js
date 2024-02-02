@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
     const productContainer = document.getElementById('product-container');
-    let productsData; // Variable to store fetched product data
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    let products = [];
   
-    // Fetch product data from the JSON file
-    fetch('products.json')
+    // Fetch product data from your server or an API
+    fetch('products.json') // Replace 'path/to/your/products.json' with the actual path to your JSON file
       .then(response => response.json())
-      .then(products => {
-        productsData = products; // Store fetched data
+      .then(data => {
+        products = data;
         displayProducts(products);
       })
       .catch(error => {
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // Function to filter products based on category
     function filterItems(category) {
-      const filteredProducts = category === 'all' ? productsData : productsData.filter(product => product.category === category);
+      const filteredProducts = category === 'all' ? products : products.filter(product => product.category === category);
       displayProducts(filteredProducts);
     }
   
@@ -29,19 +30,19 @@ document.addEventListener('DOMContentLoaded', function () {
   
         const productImg = document.createElement('img');
         productImg.src = product.image;
+        productImg.alt = product.description;
         productCard.appendChild(productImg);
   
-        const productOverlay = document.createElement('div');
-        productOverlay.classList.add('product-overlay');
-        productOverlay.innerHTML = `<p>${product.description}</p><p>${product.price}</p>`;
-        productCard.appendChild(productOverlay);
+        const productInfo = document.createElement('div');
+        productInfo.classList.add('product-info');
+        productInfo.innerHTML = `<p>${product.name}</p><p>${product.price}</p>`;
+        productCard.appendChild(productInfo);
   
         productContainer.appendChild(productCard);
       });
     }
   
     // Event listener for category filtering
-    const filterButtons = document.querySelectorAll('.filter-btn');
     filterButtons.forEach(button => {
       button.addEventListener('click', function () {
         const category = this.dataset.category;
