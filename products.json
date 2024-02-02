@@ -2,16 +2,18 @@
     {
       "name": "Handbag 1",
       "category": "handbag",
-      "price": 99.99,
+      "price": "99.99",
       "image": "images/bag1.jpg",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "color": "A delightful shade of pink that exudes charm and femininity.",
+        "material": "High-quality beads combined with a durable metal chain for a stylish and sturdy accessory."
     },
     {
       "name": "Accessory 1",
       "category": "accessory",
-      "price": 49.99,
+      "price": "49.99",
       "image": "images/bag1.jpg",
-      "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "color": "A delightful shade of pink that exudes charm and femininity.",
+      "material": "High-quality beads combined with a durable metal chain for a stylish and sturdy accessory."
     }
   ]
   

@@ -1,13 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     const productContainer = document.getElementById('product-container');
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    let products = [];
   
     // Fetch product data from your server or an API
     fetch('products.json') // Replace 'path/to/your/products.json' with the actual path to your JSON file
       .then(response => response.json())
-      .then(data => {
-        products = data;
+      .then(products => {
+        // Display the products
         displayProducts(products);
       })
       .catch(error => {
@@ -30,12 +28,20 @@ document.addEventListener('DOMContentLoaded', function () {
   
         const productImg = document.createElement('img');
         productImg.src = product.image;
-        productImg.alt = product.description;
         productCard.appendChild(productImg);
+  
+        const productPrice = document.createElement('p');
+        productPrice.classList.add('price');
+        productPrice.textContent = `$${product.price.toFixed(2)}`;
+        productCard.appendChild(productPrice);
   
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
-        productInfo.innerHTML = `<p>${product.name}</p><p>${product.price}</p>`;
+        productInfo.innerHTML = `
+          <p class="category">Category: ${product.category}</p>
+          <p class="dimensions">Dimensions: ${product.dimensions}</p>
+          <p class="description">${product.description}</p>
+        `;
         productCard.appendChild(productInfo);
   
         productContainer.appendChild(productCard);
@@ -43,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   
     // Event listener for category filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
     filterButtons.forEach(button => {
       button.addEventListener('click', function () {
         const category = this.dataset.category;

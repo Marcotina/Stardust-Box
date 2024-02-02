@@ -100,19 +100,18 @@ header {
     width: 500px;
     max-height: 500px;
     transition: filter 0.5s ease-in-out;
-    position: relative; /* Add position relative for absolute positioning of child elements */
+    position: relative;
   }
   
-  .price {
+  .product-card .price {
     position: absolute;
-    bottom: -10px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     background-color: black;
     color: rgb(255, 238, 144);
     padding: 5px;
-    border-radius: 5px;
   }
   
   .product-card:hover img {
@@ -122,34 +121,28 @@ header {
   .product-card:hover .price {
     color: black;
     background-color: rgb(255, 238, 144);
-    animation: moveAndRepositionPrice 1s forwards;
+    animation: moveAndReposition 2s linear forwards;
   }
   
-  @keyframes moveAndRepositionPrice {
+  @keyframes moveAndReposition {
     0% {
       transform: translateY(0%) translateX(-60%);
     }
+    50% {
+      transform: translateY(-600%) translateX(-60%);
+    }
     100% {
-      transform: translateY(-600%) translateX(-270%);
+      transform: translateY(-600%) translateX(-260%);
     }
   }
   
   .product-card:hover .product-info {
-    top: 0; /* Move it to the top */
-    opacity: 1;
-  }
-  .product-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: left;
-    color: aliceblue;
-    padding: 10px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    animation: slideFromBottom 1s ease-in-out forwards;
   }
   
+  .product-card .product-info {
+    position: absolute;
+  }  
   @keyframes slideInInfo {
     0% {
       transform: translateY(100%);
