@@ -119,7 +119,7 @@ header {
   }
   
   .product-card:hover .price {
-    background-color: rgb(255, 238, 144);
+    color: black;
     animation: moveAndReposition 2s linear forwards;
   }
   
