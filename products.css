@@ -122,7 +122,6 @@ header {
   .product-card:hover .price {
     color: black;
     background-color: rgb(255, 238, 144);
-    padding: 0px;
     animation: moveAndReposition 2s linear forwards, floatPrice 2s ease-in-out forwards; /* Add floatPrice animation */
   }
   
@@ -145,6 +144,10 @@ header {
     100% {
       left: 80%; /* Final position */
     }
+  }
+  
+  .product-card:hover img {
+    filter: blur(7px);
   }
   
   .product-card:hover .product-info {
