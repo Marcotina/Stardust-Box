@@ -106,44 +106,21 @@ header {
     transition: filter 0.5s ease-in-out;
     position: relative;
   }
-  
   .product-card .price {
     position: absolute;
     bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 10px; /* Adjusted to stick to the bottom right */
     text-align: center;
-    background-color: black;
-    color: rgb(255, 238, 144);
+  
     padding: 5px;
-    transition: left 0.5s ease-in-out; /* Add transition property */
+    transition: bottom 0.5s ease-in-out, right 0.5s ease-in-out; /* Add transition properties */
   }
   
   .product-card:hover .price {
     color: black;
     background-color: rgb(255, 238, 144);
-    animation: moveAndReposition 2s linear forwards, floatPrice 2s ease-in-out forwards; /* Add floatPrice animation */
-  }
-  
-  @keyframes moveAndReposition {
-    0% {
-      transform: translateY(0%) translateX(-50%);
-    }
-    50% {
-      transform: translateY(-600%) translateX(-50%);
-    }
-    100% {
-      transform: translateY(-600%) translateX(-250%);
-    }
-  }
-  
-  @keyframes floatPrice {
-    0%, 50% {
-      left: 50%; /* Initial and middle position */
-    }
-    100% {
-      left: 80%; /* Final position */
-    }
+    bottom: 30px; /* Final position */
+    right: 30px; /* Final position */
   }
   
   .product-card:hover img {
