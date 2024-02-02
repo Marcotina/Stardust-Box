@@ -111,16 +111,17 @@ header {
   }
   
   .product-card {
-    position: relative;
-    overflow: hidden;
-    margin: 20px;
-    width: 300px;
-    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .product-card img {
+  .product-img {
     width: 100%;
-    height: auto;
+    max-height: 300px; /* Set your desired max height */
+    object-fit: cover;
+    border: 1px solid rgb(255, 238, 144);
+    border-radius: 10px;
   }
   
   .product-card:hover {
@@ -131,6 +132,6 @@ header {
     background-color: black;
     color: rgb(255, 238, 144);
     padding: 10px;
-    border-radius: 5px;
     text-align: center;
+    border-radius: 0 0 10px 10px; /* Round only the bottom corners */
   }
