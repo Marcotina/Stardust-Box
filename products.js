@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
-        productInfo.innerHTML = `<p>${product.name}</p><p>${product.price}</p>`;
+        productInfo.innerHTML = `<p>${product.name}</p><p>$${product.price.toFixed(2)}</p>`;
         productCard.appendChild(productInfo);
   
         productContainer.appendChild(productCard);
