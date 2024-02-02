@@ -39,9 +39,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
         productInfo.innerHTML = `
-          <p class="category">Category: ${product.category}</p>
+        <p class="name">Name: ${product.name}</p>
+          <p class="price">Price: ${product.price}</p>
           <p class="dimensions">Dimensions: ${product.dimensions}</p>
-          <p class="description">${product.description}</p>
+          <p class="color">Color :${product.color}</p>
+          <p class="material">Material: ${product.material}</p>
         `;
         productCard.appendChild(productInfo);
   
