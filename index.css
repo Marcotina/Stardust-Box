@@ -37,20 +37,12 @@ body {
   margin-right: auto;
   text-align: center;
 }
-.logo {
-  order: 1; /* Reorder the logo to the first position */
-}
+
 
 .logo img {
   max-height: 50px;
   display: block; /* Ensure the image is centered */
   margin: 0 auto;
-}
-
-nav {
-  display: flex;
-  align-items: center; /* Align items vertically in the flex container */
-  order: 2; /* Reorder the navigation to the second position */
 }
 
 nav a {
@@ -150,26 +142,17 @@ nav a {
   header {
     padding: 10px 0;
   }
-
+  nav a {
+    margin: 0 15px; /* Add spacing between navigation links */
+    font-size: 16px; /* Adjust font size for better readability */
+  }
   .container {
     flex-direction: column; /* Stack items vertically in smaller screens */
     align-items: center;
   }
-
-  .logo {
-    order: 1; /* Reorder the logo to appear after the navigation */
-  }
   .big-title{
     font-size: 140%;
   padding-top: 15px;
-  }
-  nav {
-    order: 2;
-    text-align: center; /* Center the navigation links */
-  }
-
-  nav a {
-    margin-right: 0 15px; /* Add spacing between navigation links */
   }
 
   .marquee {
