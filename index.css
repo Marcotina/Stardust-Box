@@ -160,6 +160,7 @@ nav a {
     order: 1; /* Reorder the logo to appear after the navigation */
   }
   .big-title{
+    font-size: 140%;
   padding-top: 15px;
   }
   nav {
