@@ -120,6 +120,7 @@ header {
   
   .product-card:hover .price {
     color: black;
+    background-color: none;
     animation: moveAndReposition 2s linear forwards;
   }
   
