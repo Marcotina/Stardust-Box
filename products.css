@@ -109,7 +109,9 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .product-card {
+  /* Add these styles to your existing CSS file */
+
+.product-card {
     position: relative;
     overflow: hidden;
     margin: 20px;
@@ -121,23 +123,21 @@ header {
   .product-card img {
     width: 100%; /* Make the image responsive */
     max-height: 500px; /* Set max-height to 500px */
-    transition: transform 0.5s ease-in-out; /* Add a smooth transition for the hover effect */
+    transition: filter 0.5s ease-in-out; /* Add a smooth transition for the filter effect */
+  }
+  
+  .product-card .product-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Add a smooth transition for the fade-in effect */
   }
   
   .product-card:hover img {
-    transform: scale(1.1); /* Scale up the image on hover */
-  }
-  
-  .product-info {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-    color: #fff;
-    width: 100%;
-    padding: 15px;
-    box-sizing: border-box;
-    opacity: 0; /* Initially set opacity to 0 for the fade-in effect */
-    transition: opacity 0.5s ease-in-out; /* Add a smooth transition for the fade-in effect */
+    filter: blur(5px); /* Apply a blur effect on hover */
   }
   
   .product-card:hover .product-info {
@@ -147,8 +147,10 @@ header {
   .product-info p {
     margin: 0;
     font-size: 16px;
+    color: #fff;
   }
   
   .product-info p.price {
     font-weight: bold;
   }
+  
