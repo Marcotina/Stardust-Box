@@ -29,9 +29,10 @@
   </header>
 
   <div class="filter-container">
-    <button class="filter-btn" onclick="filterItems('all')">All Products</button>
-    <button class="filter-btn" onclick="filterItems('handbag')">Handbags</button>
-    <button class="filter-btn" onclick="filterItems('accessory')">Accessories</button>
+    <button class="filter-btn" data-category="all" onclick="filterItems('all')">All Products</button>
+<button class="filter-btn" data-category="handbag" onclick="filterItems('handbag')">Handbags</button>
+<button class="filter-btn" data-category="accessory" onclick="filterItems('accessory')">Accessories</button>
+
   </div>
 
   <section id="product-container">

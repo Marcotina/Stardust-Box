@@ -43,4 +43,19 @@ document.addEventListener('DOMContentLoaded', function () {
             productContainer.appendChild(productCard);
         });
     }
+
+  // Function to filter products based on category
+  function filterItems(category) {
+    const filteredProducts = category === 'all' ? products : products.filter(product => product.category === category);
+    displayProducts(filteredProducts);
+}
+
+// Event listener for category filtering
+const filterButtons = document.querySelectorAll('.filter-btn');
+filterButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        const category = this.dataset.category;
+        filterItems(category);
+    });
+});
 });
