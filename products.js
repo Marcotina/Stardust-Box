@@ -1,16 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
     const productContainer = document.getElementById('product-container');
-    let productsData = []; // Declare a variable to store the product data
+    let productsData; // Variable to store fetched product data
   
-    // Fetch product data from your server or an API
+    // Fetch product data from the JSON file
     fetch('products.json')
       .then(response => response.json())
       .then(products => {
-        // Store the product data in the variable
-        productsData = products;
-  
-        // Display the initial products
-        displayProducts(productsData);
+        productsData = products; // Store fetched data
+        displayProducts(products);
       })
       .catch(error => {
         console.error('Error fetching product data:', error);
@@ -34,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function () {
         productImg.src = product.image;
         productCard.appendChild(productImg);
   
-        const productInfo = document.createElement('div');
-        productInfo.classList.add('product-info');
-        productInfo.innerHTML = `<p>${product.name}</p><p>$${product.price.toFixed(2)}</p>`;
-        productCard.appendChild(productInfo);
+        const productOverlay = document.createElement('div');
+        productOverlay.classList.add('product-overlay');
+        productOverlay.innerHTML = `<p>${product.description}</p><p>${product.price}</p>`;
+        productCard.appendChild(productOverlay);
   
         productContainer.appendChild(productCard);
       });
