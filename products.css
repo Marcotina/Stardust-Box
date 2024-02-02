@@ -120,9 +120,8 @@ header {
   .product-card:hover .price {
     color: black;
     background-color: rgb(255, 238, 144);
-    bottom: 30px; /* Final position */
-    right: 30px; /* Final position */
-    size: 120%;
+    bottom: 20px; /* Final position */
+    right: 20px; /* Final position */
   }
   
   .product-card:hover img {
