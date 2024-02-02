@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to display products in the product-container
     function displayProducts(products) {
-        productContainer.innerHTML = '';
+        productContainer.innerHTML = "";
 
         products.forEach(product => {
             const productCard = document.createElement('div');
