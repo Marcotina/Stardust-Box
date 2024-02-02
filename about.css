@@ -231,6 +231,9 @@ body {
   h4, h5{
     font-size: 90%
   }
+  p{
+    font-size: 90%;
+  }
 h2{
   font-size: 120%;
   color: aliceblue;
