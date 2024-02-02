@@ -115,47 +115,53 @@ header {
   }
   
   .product-card:hover img {
-    filter: blur(5px);
+    filter: blur(7px);
   }
   
   .product-card:hover .price {
-    color: aliceblue;
-    background-color: black;
-    animation: moveAndReposition 1s ease-in-out forwards;
+    color: black;
+    background-color: rgb(255, 238, 144);
+    animation: moveAndReposition 2s linear forwards;
   }
   
   @keyframes moveAndReposition {
     0% {
-      transform: translateY(0%);
+      transform: translateY(0%) translateX(-50%);
+    }
+    50% {
+      transform: translateY(-600%) translateX(-50%);
     }
     100% {
-      transform: translateY(-100%);
+      transform: translateY(-600%) translateX(-250%);
     }
   }
   
   .product-card:hover .product-info {
-    opacity: 1;
-    animation: slideIn 1s ease-in-out forwards;
+    animation: slideInFromBottom 1s forwards;
   }
   
   .product-card .product-info {
     position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    top: 0; /* Change from bottom to top */
+    left: 0;
+    text-align: left;
+    background-color: black;
     color: rgb(255, 238, 144);
-    padding: 5px;
-    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
     opacity: 0;
+    transition: opacity 0.5s ease-in-out;
   }
   
-  @keyframes slideIn {
+  @keyframes slideInFromBottom {
     0% {
       transform: translateY(100%);
+      opacity: 0;
     }
     100% {
       transform: translateY(0%);
+      opacity: 1;
     }
   }
   
