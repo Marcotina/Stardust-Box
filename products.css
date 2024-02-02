@@ -109,14 +109,14 @@ header {
   .product-card .price {
     position: absolute;
     bottom: 10px;
-    right: 10px; /* Adjusted to stick to the bottom right */
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     background-color: black;
     color: rgb(255, 238, 144);
     padding: 5px;
-    transition: bottom 0.5s ease-in-out, right 0.5s ease-in-out; /* Add transition properties */
+    transition: left 0.5s ease-in-out; /* Add transition property */
   }
-  
   .product-card:hover .price {
     color: black;
     background-color: rgb(255, 238, 144);
