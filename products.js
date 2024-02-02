@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const productContainer = document.getElementById('product-container');
+    let products; // Declare the products variable
   
     // Fetch product data from your server or an API
-    fetch('products.json') // Replace 'path/to/your/products.json' with the actual path to your JSON file
+    fetch('products.json')
       .then(response => response.json())
-      .then(products => {
-        // Display the products
+      .then(data => {
+        products = data; // Assign data to the products variable
         displayProducts(products);
       })
       .catch(error => {
@@ -20,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // Function to display products in the product-container
     function displayProducts(products) {
-      productContainer.innerHTML = ''; // Clear existing products
+      productContainer.innerHTML = '';
   
       products.forEach(product => {
         const productCard = document.createElement('div');
