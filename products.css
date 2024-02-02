@@ -19,7 +19,11 @@ header {
     padding-top: 80px;
     padding-bottom: 40px;
   }
-  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .content {
     z-index: 1; /* Ensure content appears on top of the blurred background */
   }
