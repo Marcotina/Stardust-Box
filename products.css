@@ -119,7 +119,6 @@ header {
   }
   
   .product-card:hover .price {
-    color: black;
     background-color: rgb(255, 238, 144);
     animation: moveAndReposition 2s linear forwards;
   }
@@ -145,7 +144,7 @@ header {
     top: 0; /* Change from bottom to top */
     left: 0;
     text-align: left;
-    color: rgb(255, 238, 144);
+    color: aliceblue;
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
