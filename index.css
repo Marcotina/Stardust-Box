@@ -118,14 +118,15 @@ nav a:hover {
   }
 }
 
+
 .footer {
   background-color: black;
   color: rgb(255, 238, 144);
-  padding: 20px 0;
   text-align: center;
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 3;
 }
 
 .social-icons {
@@ -207,10 +208,6 @@ nav a:hover {
     display: block; /* Ensure prices are displayed on the marquee */
     font-size: 10px; /* Adjust font size for better readability */
     margin-bottom: -5px;
-  }
-
-  .footer {
-    padding: 10px 0; /* Reduce padding for the footer on smaller screens */
   }
 
   .social-icons {

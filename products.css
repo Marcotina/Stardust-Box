@@ -40,14 +40,15 @@ header {
     color: white; /* Change the link color on hover to white */
   }
   
+
   .footer {
     background-color: black;
     color: rgb(255, 238, 144);
-    padding: 20px 0;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 3;
   }
   
   .social-icons {
@@ -58,30 +59,6 @@ header {
     color: rgb(255, 238, 144);
     margin: 0 10px;
     text-decoration: none;
-  }
-  @media only screen and (max-width: 769px) {
-
-    body {
-      background-size: auto; /* Adjust background size for better visibility on smaller screens */
-    }
-    header {
-      padding: 10px 0;
-    }
-    nav a {
-      margin-left: 20px;
-      font-size: 16px; /* Adjust font size for better readability */
-    }
-    .container {
-      flex-direction: column; /* Stack items vertically in smaller screens */
-      align-items: center;
-    }
-    .footer {
-      padding: 10px 0; /* Reduce padding for the footer on smaller screens */
-    }
-  
-    .social-icons {
-      font-size: 18px; /* Adjust font size for better visibility on smaller screens */
-    }
   }
   
 .filter-container {
@@ -110,47 +87,103 @@ header {
     justify-content: space-around;
   }
   /* Add these styles to your existing CSS file */
-
-.product-card {
+  .product-card {
     position: relative;
     overflow: hidden;
     margin: 20px;
-    border: 2px solid #fff; /* Set border color to match the index.html marquee */
-    border-radius: 10px; /* Add border-radius for rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box-shadow for a subtle shadow effect */
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
   .product-card img {
-    width: 100%; /* Make the image responsive */
-    max-height: 500px; /* Set max-height to 500px */
-    transition: filter 0.5s ease-in-out; /* Add a smooth transition for the filter effect */
+    width: 500px;
+    max-height: 500px;
+    transition: filter 0.5s ease-in-out;
+    position: relative; /* Add position relative for absolute positioning of child elements */
   }
   
-  .product-card .product-info {
+  .price {
     position: absolute;
-    top: 50%;
+    bottom: -10px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Add a smooth transition for the fade-in effect */
+    background-color: black;
+    color: rgb(255, 238, 144);
+    padding: 5px;
+    border-radius: 5px;
   }
   
   .product-card:hover img {
-    filter: blur(5px); /* Apply a blur effect on hover */
+    filter: blur(7px);
+  }
+  
+  .product-card:hover .price {
+    color: black;
+    background-color: rgb(255, 238, 144);
+    animation: moveAndRepositionPrice 1s forwards;
+  }
+  
+  @keyframes moveAndRepositionPrice {
+    0% {
+      transform: translateY(0%) translateX(-60%);
+    }
+    100% {
+      transform: translateY(-600%) translateX(-270%);
+    }
   }
   
   .product-card:hover .product-info {
-    opacity: 1; /* Fade in the product info on hover */
+    top: 0; /* Move it to the top */
+    opacity: 1;
+  }
+  .product-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    color: aliceblue;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  @keyframes slideInInfo {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
   }
   
   .product-info p {
-    margin: 0;
+    margin: 5px 0;
     font-size: 16px;
-    color: #fff;
   }
+
+
+
+  @media only screen and (max-width: 769px) {
+
+    body {
+      background-size: auto; /* Adjust background size for better visibility on smaller screens */
+    }
+    header {
+      padding: 10px 0;
+    }
+    nav a {
+      margin-left: 20px;
+      font-size: 16px; /* Adjust font size for better readability */
+    }
+    .container {
+      flex-direction: column; /* Stack items vertically in smaller screens */
+      align-items: center;
+    }
   
-  .product-info p.price {
-    font-weight: bold;
+    .social-icons {
+      font-size: 18px; /* Adjust font size for better visibility on smaller screens */
+    }
   }
-  
