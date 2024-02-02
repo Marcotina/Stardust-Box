@@ -111,7 +111,8 @@ header {
     bottom: 10px;
     right: 10px; /* Adjusted to stick to the bottom right */
     text-align: center;
-  
+    background-color: black;
+    color: rgb(255, 238, 144);
     padding: 5px;
     transition: bottom 0.5s ease-in-out, right 0.5s ease-in-out; /* Add transition properties */
   }
@@ -121,6 +122,7 @@ header {
     background-color: rgb(255, 238, 144);
     bottom: 30px; /* Final position */
     right: 30px; /* Final position */
+    size: 120%;
   }
   
   .product-card:hover img {
