@@ -44,11 +44,16 @@ body {
   display: block; /* Ensure the image is centered */
   margin: 0 auto;
 }
-
 nav a {
-  color: rgb(255, 238, 144);
   margin-right: 20px; /* Add some spacing between the links */
-  text-decoration: none;
+  font-size: 16px; /* Adjust font size for better readability */
+  text-decoration: none; /* Remove default underline */
+  color: rgb(255, 238, 144); /* Set the default link color */
+  transition: color 0.3s ease-in-out; /* Add a smooth color transition on hover */
+}
+
+nav a:hover {
+  color: white; /* Change the link color on hover to white */
 }
 
 .marquee {
@@ -133,17 +138,7 @@ nav a {
   text-decoration: none;
 }
 
-nav a {
-  margin: 0 15px; /* Add spacing between navigation links */
-  font-size: 16px; /* Adjust font size for better readability */
-  text-decoration: none; /* Remove default underline */
-  color: rgb(255, 238, 144); /* Set the default link color */
-  transition: color 0.3s ease-in-out; /* Add a smooth color transition on hover */
-}
 
-nav a:hover {
-  color: white; /* Change the link color on hover to white */
-}
 /* ... (existing styles) */
 @media only screen and (max-width: 769px) {
 
@@ -154,7 +149,7 @@ nav a:hover {
     padding: 10px 0;
   }
   nav a {
-    margin: 0 15px; /* Add spacing between navigation links */
+    margin-left: 20px;
     font-size: 16px; /* Adjust font size for better readability */
   }
   .container {

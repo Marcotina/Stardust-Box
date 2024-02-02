@@ -18,8 +18,9 @@ header {
 body {
     font-family: 'Bodoni', serif;
 }
+ 
 nav a {
-  margin: 0 15px; /* Add spacing between navigation links */
+  margin-left: 20px;
   font-size: 16px; /* Adjust font size for better readability */
   text-decoration: none; /* Remove default underline */
   color: rgb(255, 238, 144); /* Set the default link color */
@@ -164,12 +165,7 @@ nav a:hover {
     }
   }
   
-  
-  nav a {
-    color: rgb(255, 238, 144);
-    margin-left: 20px;
-    text-decoration: none;
-  }
+ 
   .logo img {
     max-height: 50px;
   }
@@ -232,7 +228,7 @@ nav a:hover {
     padding: 10px 0;
   }
   nav a {
-    margin: 0 15px; /* Add spacing between navigation links */
+    margin-left: 20px;
     font-size: 16px; /* Adjust font size for better readability */
   }
   .social-icons {

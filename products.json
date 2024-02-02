@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Handbag 1",
+      "category": "handbag",
+      "price": 99.99,
+      "image": "images/bag1.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "name": "Accessory 1",
+      "category": "accessory",
+      "price": 49.99,
+      "image": "images/bag1.jpg",
+      "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
+  ]
+  
