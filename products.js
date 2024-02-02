@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const productContainer = document.getElementById('product-container');
-    let products; // Declare the products variable
+    let products;
   
     // Fetch product data from your server or an API
     fetch('products.json')
       .then(response => response.json())
       .then(data => {
-        products = data; // Assign data to the products variable
+        products = data;
         displayProducts(products);
       })
       .catch(error => {
@@ -39,10 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
         productInfo.innerHTML = `
-        <p class="name">Name: ${product.name}</p>
-          <p class="price">Price: ${product.price}</p>
+          <p class="category">Category: ${product.category}</p>
           <p class="dimensions">Dimensions: ${product.dimensions}</p>
-          <p class="color">Color :${product.color}</p>
+          <p class="color">Color: ${product.color}</p>
           <p class="material">Material: ${product.material}</p>
         `;
         productCard.appendChild(productInfo);
