@@ -111,7 +111,8 @@ header {
   }
   
   .product-card {
-    width: 100%;
+    width: 500px; /* Set the desired width */
+    max-width: 100%;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
