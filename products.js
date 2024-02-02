@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
             productInfo.classList.add('product-info');
             productInfo.innerHTML = `
                 <p class="name">Product name: ${product.name}</p>
-                <p class="product-price">Product price:</p>
                 <p class="dimensions">Dimensions: ${product.dimensions}</p>
                 <p class="color">Color: ${product.color}</p>
                 <p class="material">Material: ${product.material}</p>
