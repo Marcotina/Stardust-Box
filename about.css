@@ -22,13 +22,12 @@ body {
 }
  
 nav a {
-  margin-left: 20px;
+  margin-right: 20px; /* Add some spacing between the links */
   font-size: 16px; /* Adjust font size for better readability */
   text-decoration: none; /* Remove default underline */
   color: rgb(255, 238, 144); /* Set the default link color */
   transition: color 0.3s ease-in-out; /* Add a smooth color transition on hover */
 }
-
 nav a:hover {
   color: white; /* Change the link color on hover to white */
 }
