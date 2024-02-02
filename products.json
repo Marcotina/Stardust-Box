@@ -16,5 +16,14 @@
       "color": "Gold",
       "material": "Metal",
       "image": "images/bag2.jpg"
-    }
+    },
+    {
+        "name": "Accessory 3",
+        "category": "accessory",
+        "price": 49.99,
+        "dimensions": "5x5 inches",
+        "color": "Gold",
+        "material": "Metal",
+        "image": "images/bag3.jpg"
+      }
   ]
